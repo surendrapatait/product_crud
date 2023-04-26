@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Product</title>
+</head>
+<body>
+    <h1>SHOW PRODUCT lIST</h1>
+    <br><br>
+    <hr>
+
+    <a href="/index">HOME PAGE</a><br>
+
+    <form>
+            <table border="1">
+                <thread>
+                    <th>PRODUCT ID</th>
+                    <th>PRODUCT NAME</th>
+                    <th>PRODUCT QTY</th>
+                    <th>PRODUCT PRICE</th>
+                    <th>PRODUCT VENDOR</th>
+                    <th> ACTION</th>
+                </thread>
+        <tbody>
+                {% for prod in prodList %}
+                <tr>
+                    <td>{{prod.ProductId}}</td>
+                    <td>{{prod.ProductName}}</td>
+                    <td>{{prod.ProductQty}}</td>
+                    <td>{{prod.ProductPrice}}</td>
+                    <td>{{prod.ProductVendor}}</td>
+                    <td>
+                        <a href="/edit/{{prod.ProductId}}">EDIT</a>
+                        <a href="/delete/{{prod.ProductId}}">DELETE</a>
+                    </td>
+                </tr>
+                {% endfor %}
+
+        </tbody>
+            </table>
+    </form>
+
+</body>
+</html>

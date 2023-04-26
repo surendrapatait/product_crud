@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Crud operations</title>
+</head>
+<body>
+    <center>
+        <h> PRODUCT REGISTRATION  PAGE</h><br><br><br>
+        <hr>
+    <a href="/index">HOME</a><br>
+        {{message}}
+    <form action="/save" method="post">
+        Product ID:<input type="text" name="prdid" value="{{product.ProductId}}"><br><br>
+        Product Name:<input type="text" name="prdnm" value="{{product.ProductName}}"><br><br>
+        Product Price:<input type="text" name="prdpr" value="{{product.ProductPrice}}"><br><br>
+        Product Quantity:<input type="text" name="prdqty" value="{{product.ProductQty}}"><br><br>
+        Product Vendor:<input type="text" name="prdven" value="{{product.ProductVendor}}"><br><br>
+        <input type="submit">
+    </form>
+
+    </center>
+</body>
+</html>
